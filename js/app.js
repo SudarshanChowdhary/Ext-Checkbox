@@ -6,6 +6,8 @@ gDriveApp.factory('gdocs', function () {
 });
 
 function DocsController($scope, $http, gdocs) {
+
+  console.log("angular controller")
  $scope.drc = {
    drcURL: "",
    major: "",
