@@ -6,8 +6,6 @@ gDriveApp.factory('gdocs', function () {
 });
 
 function DocsController($scope, $http, gdocs) {
-
-  console.log("angular controller")
  $scope.drc = {
    drcURL: "",
    major: "",
@@ -24,6 +22,7 @@ function DocsController($scope, $http, gdocs) {
   $http({
     method: 'POST',
     url: "../source/TripDecisionFlowchart.json"
+  //  url: "https://docs.google.com/spreadsheets/d/13x3ErXcH8fwIYlSFLPiMmfA5fKAWKJOxokuJaaOnh7E/edit#gid=0"
   }).then(function (resp) {
     console.log("Success", resp);
   }, function (err) {});
