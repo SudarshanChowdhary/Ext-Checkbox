@@ -9,6 +9,7 @@ function DocsController($scope, $http, gdocs) {
 
   console.log("angular controller")
  $scope.drc = {
+   Ldap:"",
    drcURL: "",
    major: "",
    standard: "",
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 function modifyDOM() {
   var keywords=[];
 //  console.log(document.body);
-  var checkboxEle = document.getElementById("mat-checkbox-4-input");
+  var checkboxEle = document.getElementById("mat-checkbox-3-input");
   checkboxEle.setAttribute("disabled", true);
   return keywords;
 }
@@ -69,6 +70,6 @@ chrome.tabs.executeScript({
 }, (results) => {
     //Here we have just the innerHTML and not DOM structure
     console.log('Popup script:')
-    console.log("output: ", results);
+ //   console.log("output: ", results);
   });
 
