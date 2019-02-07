@@ -6,43 +6,48 @@ gDriveApp.factory('gdocs', function () {
 });
 
 function DocsController($scope, $http, gdocs) {
-
-  console.log("angular controller")
- $scope.drc = {
-   drcURL: "",
-   major: "",
-   standard: "",
-   noMajor: false,
-   noStandard: false,
-   noMajorInput: "",
-   noStandardInput: ""
- }
-
- $scope.submitForm = function(drcForm){
-   console.log($scope.drc);
-    if(drcForm.$valid){
-  $http({
-    method: 'POST',
-    url: "../source/TripDecisionFlowchart.json"
-  }).then(function (resp) {
-    console.log("Success", resp);
-  }, function (err) {});
-
-    }
-
- }
- $scope.showNoMajaorNoStandard = false;
-
- $scope.showNoMajaorNoStandard = function(){
-   //alert("hi");
-   console.log("hello")
-  if($scope.drc.noMajor || $scope.drc.noStandard){
-    $scope.showNoMajaorNoStandard = true;
+  $scope.drc = {
+    drcURL: "",
+    major: false,
+    standard: false,
+    noMajor: false,
+    noStandard: false,
+    noMajorInput: "",
+    noStandardInput: ""
   }
- } 
 
+  $scope.resetNoMajor = function(){
+    if(!$scope.drc.noMajor){
+      $scope.drc.noMajorInput = "";
+    }
+  }
 
+  $scope.resetNoStandard = function(){
+    if(!$scope.drc.noStandard){
+      $scope.drc.noStandardInput = "";
+    }
+  }
 
+  $scope.submitForm = function (drcForm) {
+    console.log($scope.drc);
+    if (drcForm.$valid) {
+      $http({
+        method: 'POST',
+        data: $scope.drc,
+        url: "../source/TripDecisionFlowchart.json"
+      }).then(function (resp) {
+        console.log("Success", resp);
+      }, function (err) {});
+    }
+  }
+  $scope.showNoMajaorNoStandard = false;
+
+  $scope.showNoMajaorNoStandard = function () {
+    console.log("hello")
+    if ($scope.drc.noMajor || $scope.drc.noStandard) {
+      $scope.showNoMajaorNoStandard = true;
+    }
+  }
 }
 
 DocsController.$inject = ['$scope', '$http', 'gdocs']; // For code minifiers.
@@ -56,18 +61,17 @@ document.addEventListener('DOMContentLoaded', function (e) {
 });
 
 function modifyDOM() {
-  var keywords=[];
-//  console.log(document.body);
+  var keywords = [];
+  //  console.log(document.body);
   var checkboxEle = document.getElementById("mat-checkbox-4-input");
   checkboxEle.setAttribute("disabled", true);
   return keywords;
 }
 
 chrome.tabs.executeScript({
-    code: '(' + modifyDOM + ')();' //argument here is a string but function.toString() returns function's code
+  code: '(' + modifyDOM + ')();' //argument here is a string but function.toString() returns function's code
 }, (results) => {
-    //Here we have just the innerHTML and not DOM structure
-    console.log('Popup script:')
-    console.log("output: ", results);
-  });
-
+  //Here we have just the innerHTML and not DOM structure
+  console.log('Popup script:')
+  console.log("output: ", results);
+});

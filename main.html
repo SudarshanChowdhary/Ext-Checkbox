@@ -39,7 +39,7 @@
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox" name="noMajor" ng-true-value="true" ng-false-value="false"  ng-model="drc.noMajor"> No Major</label>
+          <label><input type="checkbox" name="noMajor" ng-true-value="true" ng-false-value="false" ng-checked="resetNoMajor()" ng-model="drc.noMajor"> No Major</label>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
             <!-- <input type="checkbox" name="noStandard" ng-true-value="true" ng-false-value="false"  ng-model="check"/>        -->
-          <label><input type="checkbox" name="noStandard" ng-true-value="true" ng-false-value="false"  ng-model="drc.noStandard"/>  No Standard</label>
+          <label><input type="checkbox" name="noStandard" ng-true-value="true" ng-false-value="false" ng-checked="resetNoStandard()" ng-model="drc.noStandard"/>  No Standard</label>
         </div>
       </div>
     </div>
