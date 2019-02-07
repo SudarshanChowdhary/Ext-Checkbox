@@ -19,31 +19,419 @@
 </head>
 
 <body>
-
-  <checkbox class="ng-star-inserted">
-    <mat-checkbox class="mat-checkbox mat-primary ng-valid ng-dirty ng-touched mat-checkbox-checked" color="primary" 
-    id="mat-checkbox-3">
-       <label class="mat-checkbox-layout" for="mat-checkbox-3-input">
-          <div class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin">
-             <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-3-input" tabindex="0" aria-checked="true">
-             <div class="mat-checkbox-ripple mat-ripple" matripple="">
-                <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
-             </div>
-             <div class="mat-checkbox-frame"></div>
-             <div class="mat-checkbox-background">
-                <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
-                   <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
-                </svg>
-                <div class="mat-checkbox-mixedmark"></div>
-             </div>
-          </div>
-          <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span></span>
-       </label>
-    </mat-checkbox>
- </checkbox>
-
-
-
+   <mat-card class="table mat-card ng-star-inserted">
+      <div class="header">
+         <!---->
+         <div class="cell ng-star-inserted" style="width: 20px;">  </div>
+         <div class="cell ng-star-inserted" style="width: 75px;"> Assignee </div>
+         <div class="cell ng-star-inserted" style="width: 75px;"> Disengage Reason </div>
+         <div class="cell ng-star-inserted" style="width: 75px;"> Triaged SAM </div>
+         <div class="cell ng-star-inserted" style="width: 450px;"> Detailed Root Cause </div>
+         <div class="cell ng-star-inserted" style="width: 75px;"> Corrected Timestamp </div>
+         <div class="cell ng-star-inserted" style="width: 40px;"> Major </div>
+         <div class="cell ng-star-inserted" style="width: 60px;"> Stranded </div>
+         <div class="cell ng-star-inserted" style="width: 60px;"> Potential WOM </div>
+         <div class="cell ng-star-inserted" style="width: 60px;"> Create Onboard Bug </div>
+         <div class="cell ng-star-inserted" style="width: 110px;"> Bug ID </div>
+         <div class="cell ng-star-inserted" style="width: 400px;"> Notes </div>
+         <div class="cell ng-star-inserted" style="width: 75px;"> QC Verification </div>
+         <div class="cell ng-star-inserted" style="width: 40px;"> Done </div>
+         <div class="cell ng-star-inserted" style="width: 60px;"> Give Triage Feedback </div>
+      </div>
+      <!----><!---->
+      <div class="row done summarized-answer-row ng-star-inserted">
+         <!---->
+         <div class="cell ng-star-inserted" style="width: 20px;">
+            <render-cell>
+               <!----><!---->
+               <star class="ng-star-inserted">
+                  <mat-icon class="mat-icon material-icons mat-icon-no-color" role="img" tabindex="0" aria-hidden="true">star_border</mat-icon>
+               </star>
+               <!----><!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 75px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <text-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-0 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="vevaishnavi" id="mat-input-0" placeholder="" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-0 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-0 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+               </text-input>
+               <!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 75px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <dropdown-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-1 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never" style="width: 100%;">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="PROBLEM" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" id="mat-input-1" placeholder="" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-1 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-1 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+                  <mat-autocomplete autoactivefirstoption="true" class="mat-autocomplete">
+                     <!---->
+                  </mat-autocomplete>
+               </dropdown-input>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 75px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <dropdown-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-2 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never" style="width: 100%;">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="L3" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" id="mat-input-2" placeholder="" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-2 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-2 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+                  <mat-autocomplete autoactivefirstoption="true" class="mat-autocomplete">
+                     <!---->
+                  </mat-autocomplete>
+               </dropdown-input>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 450px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <dropdown-chip-input class="ng-star-inserted">
+                  <!---->
+                  <mat-chip-list class="mat-chip-list ng-star-inserted" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false" role="listbox" aria-orientation="horizontal" id="mat-chip-list-0">
+                     <div class="mat-chip-list-wrapper">
+                        <!---->
+                        <mat-chip class="mat-chip mat-primary mat-standard-chip mat-chip-with-trailing-icon ng-star-inserted" role="option" tabindex="-1" aria-disabled="false" aria-selected="false">
+                           planner.occlusion.lane.blockage <!---->
+                           <mat-icon class="mat-chip-remove mat-chip-trailing-icon mat-icon material-icons mat-icon-no-color ng-star-inserted" matchipremove="" role="img" aria-hidden="true">cancel</mat-icon>
+                        </mat-chip>
+                     </div>
+                  </mat-chip-list>
+                  <mat-form-field class="mat-form-field ng-tns-c5-3 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never" style="width: 100%;">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" id="mat-input-3" placeholder="" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-3 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-3 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+                  <mat-autocomplete autoactivefirstoption="true" class="mat-autocomplete">
+                     <!---->
+                  </mat-autocomplete>
+               </dropdown-chip-input>
+               <!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 75px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <text-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-4 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="1571.266" id="mat-input-4" placeholder="e.g. 421.3" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                                 <label class="mat-form-field-label ng-tns-c5-4 ng-star-inserted" id="mat-form-field-label-9" for="mat-input-4" aria-owns="mat-input-4">
+                                    <!----><!----> e.g. 421.3 <!----><!---->
+                                 </label>
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-4 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-4 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+               </text-input>
+               <!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 40px;">
+            <render-cell>
+               <!----><!----><!---->
+               <checkbox class="ng-star-inserted">
+                  <mat-checkbox class="mat-checkbox mat-primary ng-untouched ng-pristine ng-valid" color="primary" id="mat-checkbox-1">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-1-input">
+                        <div class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-1-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span></span>
+                     </label>
+                  </mat-checkbox>
+               </checkbox>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 60px;">
+            <render-cell>
+               <!----><!----><!---->
+               <checkbox class="ng-star-inserted">
+                  <mat-checkbox class="mat-checkbox mat-primary ng-untouched ng-pristine ng-valid" color="primary" id="mat-checkbox-2">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-2-input">
+                        <div class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-2-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span></span>
+                     </label>
+                  </mat-checkbox>
+               </checkbox>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 60px;">
+            <render-cell>
+               <!----><!----><!---->
+               <checkbox class="ng-star-inserted">
+                  <mat-checkbox class="mat-checkbox mat-primary ng-untouched ng-pristine ng-valid" color="primary" id="mat-checkbox-3">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-3-input">
+                        <div class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-3-input" tabindex="0" aria-checked="false">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span></span>
+                     </label>
+                  </mat-checkbox>
+               </checkbox>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 60px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <bug-link class="ng-star-inserted">
+                  <a target="_blank" href="https://b.corp.google.com/issues/new?component=363549&amp;cc=chauffeur-team-triage%2Chyd-driverless-triage&amp;type=BUG&amp;priority=P2&amp;description=%0Acomment_text%3A%20Audio%20disengage%3A%20'manual%20problem%20struggling%20to%20make%20a%20left%20when%20traffic%20was%20president%20and%20a%20DZ%20is%20in%20front%20of%20us'%0ATags%3A%20L3%0Asoftware_version%3A%203.2.5-c59%0Arun%3A%2020190205_040233_C08279%0Atime_offset%3A%201571.266%0Aevent_type%3A%20Disengage%0Aseverity%3A%20L3%0Aassignee%3A%20vevaishnavi%0A%0APlay%20log%20in%20x_view%3A%0Ahttp%3A%2F%2Flocalhost%3A12000%2Fseek%3Flog%3D20190205_040233_C08279%26logtime%3D1571.266%0APlay%20sim%20trace%20in%20x_view%3A%0Ahttp%3A%2F%2Flocalhost%3A12000%2Fsim_data%3Flog%3D20190205_040233_C08279%26path%3D%2Fcns%2Ftk-d%2Fhome%2Fchauffeur-sw-quality-users%2Fsimulation_data%2Frs%3D6.4%2Fmr_run_scenarios_ttl%2Fttl%3D30d%2Fdisengage.20190205_040233_C08279_1571.266%2F1549429521756076_0_tkbm18.1549430408009497%26logtime%3D1571.266%26start_offset%3D1554.266%26end_offset%3D1581.266%0AOpen%20scenario%20in%20CarCraft%3A%0Ahttp%3A%2F%2Flocalhost%3A9321%2Fload_scenario%3Fname%3Ddisengage.20190205_040233_C08279_1571.266%0AScenario%3A%20disengage.20190205_040233_C08279_1571.266%0A%0AHeathrow%20Event%20Link%3A%0Ahttps%3A%2F%2Fchauffeur-dashboard.corp.google.com%2Ftriage%2Fdriving_events%2Fdetails%2F-2037781449159373443%0A&amp;hotlistIds=219056&amp;hotlistIds=335317" title="File a bug in component 363549">
+                     <mat-icon class="mat-icon material-icons mat-icon-no-color" role="img" aria-hidden="true">bug_report</mat-icon>
+                  </a>
+               </bug-link>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 110px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <bug-edit-panel class="ng-star-inserted">
+                  <!----><!----><a rel="noopener" target="_blank" href="http://b/36064831" class="ng-star-inserted">b/36064831</a> <!---->
+                  <mat-icon class="bug-edit-icon mat-icon material-icons mat-icon-no-color ng-star-inserted" role="img" tabindex="0" aria-hidden="true">edit</mat-icon>
+               </bug-edit-panel>
+               <!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 400px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!---->
+               <text-multiline-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-5 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <textarea class="mat-input-element mat-form-field-autofill-control cdk-textarea-autosize mat-autosize cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" mattextareaautosize="" rows="1" placeholder="" title="week 18
+                                 [PR:disengages involving yielding for occlusions for nearby blockages]" id="mat-input-5" aria-invalid="false" aria-required="false" style="height: 45px;"></textarea>
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-5 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-5 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+               </text-multiline-input>
+               <!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 75px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <dropdown-input class="ng-star-inserted">
+                  <mat-form-field class="mat-form-field ng-tns-c5-6 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid" floatlabel="never" style="width: 100%;">
+                     <div class="mat-form-field-wrapper">
+                        <div class="mat-form-field-flex">
+                           <!----><!---->
+                           <div class="mat-form-field-infix">
+                              <input class="mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-untouched ng-pristine ng-valid" matinput="" type="text" title="Verified" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" id="mat-input-6" placeholder="" aria-invalid="false" aria-required="false">
+                              <span class="mat-form-field-label-wrapper">
+                                 <!---->
+                              </span>
+                           </div>
+                           <!---->
+                        </div>
+                        <!---->
+                        <div class="mat-form-field-underline ng-tns-c5-6 ng-star-inserted"><span class="mat-form-field-ripple"></span></div>
+                        <div class="mat-form-field-subscript-wrapper">
+                           <!----><!---->
+                           <div class="mat-form-field-hint-wrapper ng-tns-c5-6 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                              <!---->
+                              <div class="mat-form-field-hint-spacer"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </mat-form-field>
+                  <mat-autocomplete autoactivefirstoption="true" class="mat-autocomplete">
+                     <!---->
+                  </mat-autocomplete>
+               </dropdown-input>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 40px;">
+            <render-cell>
+               <!----><!----><!---->
+               <checkbox class="ng-star-inserted">
+                  <mat-checkbox class="mat-checkbox mat-primary ng-untouched ng-pristine ng-valid mat-checkbox-checked" color="primary" id="mat-checkbox-4">
+                     <label class="mat-checkbox-layout" for="mat-checkbox-4-input">
+                        <div class="mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin">
+                           <input class="mat-checkbox-input cdk-visually-hidden" type="checkbox" id="mat-checkbox-4-input" tabindex="0" aria-checked="true">
+                           <div class="mat-checkbox-ripple mat-ripple" matripple="">
+                              <div class="mat-ripple-element mat-checkbox-persistent-ripple"></div>
+                           </div>
+                           <div class="mat-checkbox-frame"></div>
+                           <div class="mat-checkbox-background">
+                              <svg xml:space="preserve" class="mat-checkbox-checkmark" focusable="false" version="1.1" viewBox="0 0 24 24">
+                                 <path class="mat-checkbox-checkmark-path" d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white"></path>
+                              </svg>
+                              <div class="mat-checkbox-mixedmark"></div>
+                           </div>
+                        </div>
+                        <span class="mat-checkbox-label"><span style="display:none">&nbsp;</span></span>
+                     </label>
+                  </mat-checkbox>
+               </checkbox>
+               <!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+         <div class="cell ng-star-inserted" style="width: 60px;">
+            <render-cell>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+               <bug-link class="ng-star-inserted">
+                  <a target="_blank" href="https://b.corp.google.com/issues/new?component=160999&amp;cc=chauffeur-team-triage%2Cvevaishnavi&amp;type=BUG&amp;priority=P2&amp;title=Triage%20Problem%3A%20%2020190205_040233_C08279%20t%3D1571.266&amp;description=%0Acomment_text%3A%20Audio%20disengage%3A%20'manual%20problem%20struggling%20to%20make%20a%20left%20when%20traffic%20was%20president%20and%20a%20DZ%20is%20in%20front%20of%20us'%0ATags%3A%20L3%0Asoftware_version%3A%203.2.5-c59%0Arun%3A%2020190205_040233_C08279%0Atime_offset%3A%201571.266%0Aevent_type%3A%20Disengage%0Aassignee%3A%20vevaishnavi%0A%0APlay%20log%20in%20x_view%3A%0Ahttp%3A%2F%2Flocalhost%3A12000%2Fseek%3Flog%3D20190205_040233_C08279%26logtime%3D1571.266%0APlay%20sim%20trace%20in%20x_view%3A%0Ahttp%3A%2F%2Flocalhost%3A12000%2Fsim_data%3Flog%3D20190205_040233_C08279%26path%3D%2Fcns%2Ftk-d%2Fhome%2Fchauffeur-sw-quality-users%2Fsimulation_data%2Frs%3D6.4%2Fmr_run_scenarios_ttl%2Fttl%3D30d%2Fdisengage.20190205_040233_C08279_1571.266%2F1549429521756076_0_tkbm18.1549430408009497%26logtime%3D1571.266%26start_offset%3D1554.266%26end_offset%3D1581.266%0AOpen%20scenario%20in%20CarCraft%3A%0Ahttp%3A%2F%2Flocalhost%3A9321%2Fload_scenario%3Fname%3Ddisengage.20190205_040233_C08279_1571.266%0AScenario%3A%20disengage.20190205_040233_C08279_1571.266%0A%0AHeathrow%20Event%20Link%3A%0Ahttps%3A%2F%2Fchauffeur-dashboard.corp.google.com%2Ftriage%2Fdriving_events%2Fdetails%2F-2037781449159373443%0A" title="File a bug in component 160999">
+                     <mat-icon class="mat-icon material-icons mat-icon-no-color" role="img" aria-hidden="true">bug_report</mat-icon>
+                  </a>
+               </bug-link>
+               <!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!---->
+            </render-cell>
+         </div>
+      </div>
+      <!----><!----><!----><!---->
+   </mat-card>
 </body>
 
 </html>
