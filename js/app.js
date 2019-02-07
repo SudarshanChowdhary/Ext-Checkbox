@@ -20,6 +20,7 @@ function DocsController($scope, $http, gdocs) {
  $scope.showNoMajaorNoStandard = false;
 
  $scope.showNoMajaorNoStandard = function(){
+   //alert("hi");
    console.log("hello")
   if($scope.drc.noMajor || $scope.drc.noStandard){
     $scope.showNoMajaorNoStandard = true;
@@ -52,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
 function modifyDOM() {
   var keywords=[];
 //  console.log(document.body);
-  var checkboxEle = document.getElementById("mat-checkbox-3-input");
+  var checkboxEle = document.getElementById("mat-checkbox-4-input");
   checkboxEle.setAttribute("disabled", true);
   return keywords;
 }

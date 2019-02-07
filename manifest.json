@@ -1,13 +1,14 @@
 {
-  "name": "DRC",
+  "name": "Triage Helper",
   "version": "1.0.5",
   "manifest_version": 2,
+  "description": "Making sure triagers take the right descision on an event",
  
   "icons": {
     "128": "icon_128.png"
   },
   "browser_action": {
-    "default_title": "DRC",
+    "default_title": "Triage Helper",
     "default_popup": "main.html"
   },
 
