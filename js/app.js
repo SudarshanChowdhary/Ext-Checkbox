@@ -17,6 +17,20 @@ function DocsController($scope, $http, gdocs) {
    noMajorInput: "",
    noStandardInput: ""
  }
+
+ $scope.submitForm = function(drcForm){
+   console.log($scope.drc);
+    if(drcForm.$valid){
+  $http({
+    method: 'POST',
+    url: "../source/TripDecisionFlowchart.json"
+  }).then(function (resp) {
+    console.log("Success", resp);
+  }, function (err) {});
+
+    }
+
+ }
  $scope.showNoMajaorNoStandard = false;
 
  $scope.showNoMajaorNoStandard = function(){
@@ -27,15 +41,6 @@ function DocsController($scope, $http, gdocs) {
   }
  } 
 
-  // $http({
-  //   method: 'GET',
-  //   params: {
-  //     'alt': 'media'
-  //   },
-  //   url: "../source/TripDecisionFlowchart.json"
-  // }).then(function (data) {
-  //   $scope.keywordDefinitions = data.data;
-  // }, function (data, status, headers, config) {});
 
 
 }
