@@ -18,8 +18,11 @@
 
   "permissions": [
     "activeTab",
-    "<all_urls>",
+    "webNavigation",
     "tabs",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>",
     "*://*/*",
     "identity",
     "*://*.google.com/*",
@@ -27,7 +30,6 @@
     "http://www.google.com/",
     "https://ssl.gstatic.com/",
     "https://www.googleapis.com/",
-    "https://accounts.google.com/",
-    "https://*/"
+    "https://accounts.google.com/"
   ]
 }
