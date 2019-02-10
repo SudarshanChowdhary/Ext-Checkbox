@@ -27,20 +27,12 @@ function DocsController($scope, $http, gdocs) {
       $http({
         method: 'GET',
         dataType: "json",
-        url: "https://script.google.com/macros/s/AKfycbzVKBifA3kqqntOrazFlvNKrelZhk0dO1qJcQLxmOb2Qg7GUQ/exec?" + queryString
+        url: "https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec?" + queryString
+      //  url: "https://script.google.com/macros/s/AKfycbzVKBifA3kqqntOrazFlvNKrelZhk0dO1qJcQLxmOb2Qg7GUQ/exec?" + queryString
       }).then(function (resp) {
         console.log("Success", resp);
         window.close();
       }, function (err) {});
-    }
-  }
-  $scope.showNoMajaorNoStandard = false;
-
-  $scope.showNoMajaorNoStandard = function () {
-    //alert("hi");
-    console.log("hello")
-    if ($scope.drc.noMajor || $scope.drc.noStandard) {
-      $scope.showNoMajaorNoStandard = true;
     }
   }
 }

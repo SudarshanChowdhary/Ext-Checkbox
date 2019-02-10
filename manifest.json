@@ -30,6 +30,8 @@
     "http://www.google.com/",
     "https://ssl.gstatic.com/",
     "https://www.googleapis.com/",
-    "https://accounts.google.com/"
+    "https://accounts.google.com/",
+    "https://chauffeur-dashboard.corp.google.com/triage/driving_events?filters=%7B%22startDate%22:%22__EQ__2018-12-01__%22,%22assignee_qc%22:%22__RE__%255E%2524__%22,%22assignee%22:%22__RE__cgarikipati__%22%7D&replication=2,ASSIGNEE_ELIGIBLE",
+    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/940697499312832589?filters=%7B%22startDate%22:%22__EQ__2018-12-01__%22,%22assignee_qc%22:%22__RE__%255E%2524__%22,%22assignee%22:%22__RE__cgarikipati__%22%7D&replication=2,ASSIGNEE_ELIGIBLE"  
   ]
 }
