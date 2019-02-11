@@ -27,8 +27,11 @@ function DocsController($scope, $http, gdocs) {
       $http({
         method: 'GET',
         dataType: "json",
+        headers: {'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization'},
+     //   url: "https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec?" + queryString
+     //   url: "https://script.google.com/macros/s/AKfycbzVKBifA3kqqntOrazFlvNKrelZhk0dO1qJcQLxmOb2Qg7GUQ/exec?" + queryString
         url: "https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec?" + queryString
-      //  url: "https://script.google.com/macros/s/AKfycbzVKBifA3kqqntOrazFlvNKrelZhk0dO1qJcQLxmOb2Qg7GUQ/exec?" + queryString
+     //   console.log(url);
       }).then(function (resp) {
         console.log("Success", resp);
         window.close();

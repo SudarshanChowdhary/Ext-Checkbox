@@ -27,11 +27,17 @@
     "identity",
     "*://*.google.com/*",
     "storage",
+    "https://www.google.com/",
+    "https://www.gmail.com/",
     "http://www.google.com/",
+    "https://www.google.com/",
     "https://ssl.gstatic.com/",
     "https://www.googleapis.com/",
     "https://accounts.google.com/",
+    "https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec",
+    "https://script.googleusercontent.com/a/macros/google.com/echo?user_content_key=xBQ79UE_mHFm-srcQBa5zpWn-0EGejvAQHYq0IJX8bhF93HjZL7d32EhTbiriEEcArzUePSK0XuuugnMAZP4W8xM2KYxLRAHOJmA1Yb3SEsKFZqtv3DaNYcMrmhZHmUMxD75a2e6HaTsfofgurHcvNXIpf5m9CgHDkgIhbk1BX8KIkdD0K19WSLRl7d8e-1qm-fGQMsvDTrp7l8Ugv3hIPtVnk_N2pUYAyxnVTpVCYXZN21lQZpHiKQASuBRbuMt96mG4kHM6NhIxO-kAkwQs9CCS2h10ox_zItywWGdn4uX46-M9AsUuSwSK5Gr0QQt4L4h5cSNPGrQo2QY6a-_opKR4F-5yG50dy6A9qYFdImujf7h_U62g3yrO6_4OCAt8l0Vq-S1Kkl7-PSM9wjMJHyrO6_4OCAtFCzMzK21k-g&lib=M2sYdQHFntGXqY3_TPmLmY3Zsipp4DO1b",
     "https://chauffeur-dashboard.corp.google.com/triage/driving_events?filters=%7B%22startDate%22:%22__EQ__2018-12-01__%22,%22assignee_qc%22:%22__RE__%255E%2524__%22,%22assignee%22:%22__RE__cgarikipati__%22%7D&replication=2,ASSIGNEE_ELIGIBLE",
     "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/940697499312832589?filters=%7B%22startDate%22:%22__EQ__2018-12-01__%22,%22assignee_qc%22:%22__RE__%255E%2524__%22,%22assignee%22:%22__RE__cgarikipati__%22%7D&replication=2,ASSIGNEE_ELIGIBLE"  
-  ]
+  ],
+  "content_security_policy": "script-src 'self' https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec; object-src 'self'"
 }
