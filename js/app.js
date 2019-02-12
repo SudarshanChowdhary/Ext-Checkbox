@@ -7,32 +7,40 @@ gDriveApp.factory('gdocs', function () {
 
 function DocsController($scope, $http, gdocs) {
 
-  console.log("angular controller")
   $scope.drc = {
     LDAP: "",
     DRC: "",
-    major: false,
-    standard: false,
-    noMajor: false,
-    noStandard: false,
+    selectedOptions: {
+      major: false,
+      standard: false,
+      noMajor: false,
+      noStandard: false
+    },
     noMajorInput: "",
-    noStandardInput: ""
+    noStandardInput: "",
+    checkboxRequired: true
   }
 
-  $scope.submitForm = function (drcForm) {
+  $scope.onCheckBoxSelected = function () {
+    for (var key in $scope.drc.selectedOptions) {
+      console.log('Key -' + key + ' val- ' + $scope.drc.selectedOptions[key]);
+      if ($scope.drc.selectedOptions[key]) {
+        $scope.drc.checkboxRequired = false;
+      }
+    }
+  };
 
+  $scope.submitForm = function (drcForm) {
     if (drcForm.$valid) {
-      var queryString = "LDAP=" + $scope.drc.LDAP + "&DRC=" + $scope.drc.DRC + "&major=" + $scope.drc.major + "&standard=" + $scope.drc.standard + "&noMajor=" + $scope.drc.noMajor + "&noStandard=" + $scope.drc.noStandard + "&noMajorInput=" + $scope.drc.noMajorInput + "&noStandardInput=" + $scope.drc.noStandardInput;
+      var queryString = "LDAP=" + $scope.drc.LDAP + "&DRC=" + $scope.drc.DRC + "&major=" + $scope.drc.selectedOptions.major + "&standard=" + $scope.drc.selectedOptions.standard + "&noMajor=" + $scope.drc.selectedOptions.noMajor + "&noStandard=" + $scope.drc.selectedOptions.noStandard + "&noMajorInput=" + $scope.drc.noMajorInput + "&noStandardInput=" + $scope.drc.noStandardInput;
       console.log($scope.drc);
       $http({
         method: 'GET',
         dataType: "json",
-       //   url: "https://script.google.com/a/google.com/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec?" + queryString
-     //   url: "https://script.google.com/macros/s/AKfycbzVKBifA3kqqntOrazFlvNKrelZhk0dO1qJcQLxmOb2Qg7GUQ/exec?" + queryString
-//        url: "https://script.google.com/a/macros/s/AKfycbx6nYBh1TMq-zP0Ux1wiFDZcm1OOcGtcVb9JLQX-ouGB6EJeScZ/exec?" + queryString
-                url: "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?" + queryString
+        url: "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?" + queryString
       }).then(function (resp) {
         console.log("Success", resp);
+
         function modifyDOM1() {
           var keywords = [];
           //  console.log(document.body);
@@ -41,18 +49,45 @@ function DocsController($scope, $http, gdocs) {
           checkboxEle.setAttribute("disabled", false);
           return keywords;
         }
-        
+
         chrome.tabs.executeScript({
           code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
         }, (results) => {
-          //Here we have just the innerHTML and not DOM structure
-          console.log('Popup script:')
-          //   console.log("output: ", results);
+         
         });
-        
 
+        chrome.tabs.getAllInWindow(undefined, function (tabs) {
+          console.log(tabs);
+          for (var i = 0; i < tabs.length; i++) {
+            //  https://chauffeur-dashboard.corp.google.com/triage/driving_events
+            let matchURL = tabs[i].url.split("?")[0];
+            //            if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events"){
+            if (tabs[i].url == "file:///C:/Users/sudarshan/Desktop/ext-chrome/checkbox/example.html") {
+              console.log("URL Match found", tabs[i].url);
+              chrome.tabs.update(tabs[i].id, {
+                url: tabs[i].url,
+                selected: true
+              });
+
+              function modifyDOM1() {
+                var keywords = [];
+                var checkboxEle = document.getElementById("mat-checkbox-4-input");
+                console.log(checkboxEle);
+                checkboxEle.setAttribute("disabled", false);
+                return keywords;
+              }
+
+              chrome.tabs.executeScript({
+                code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
+              }, (results) => {
+                //Here we have just the innerHTML and not DOM structure
+                });
+              return;
+            }
+          }
+        });
         window.close();
-        
+
       }, function (err) {});
     }
   }
@@ -94,17 +129,6 @@ chrome.tabs.executeScript({
 //     });
 // });
 
-// chrome.tabs.getAllInWindow(undefined, function(tabs) {
-//   console.log(tabs);
-//   for (var i = 0;i<tabs.length; i++) {
-
-//     if (tabs[i].url == "file:///C:/Users/gkoyalk/chrome%20extensions/Ext-checkbox/example.html") {
-//       console.log("URL Match found",tabs[i].url);
-//       chrome.tabs.update(tabs[i].id, {url:url, selected: true});
-//       return;
-//     }
-//   }
-// });
 
 
 //   chrome.tabs.query("file:///C:/Users/gkoyalk/chrome%20extensions/Ext-Checkbox/example.html", function(tab)
