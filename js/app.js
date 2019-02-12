@@ -33,7 +33,26 @@ function DocsController($scope, $http, gdocs) {
                 url: "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?" + queryString
       }).then(function (resp) {
         console.log("Success", resp);
+        function modifyDOM1() {
+          var keywords = [];
+          //  console.log(document.body);
+          var checkboxEle = document.getElementById("mat-checkbox-4-input");
+          console.log(checkboxEle);
+          checkboxEle.setAttribute("disabled", false);
+          return keywords;
+        }
+        
+        chrome.tabs.executeScript({
+          code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
+        }, (results) => {
+          //Here we have just the innerHTML and not DOM structure
+          console.log('Popup script:')
+          //   console.log("output: ", results);
+        });
+        
+
         window.close();
+        
       }, function (err) {});
     }
   }

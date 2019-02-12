@@ -1,12 +1,16 @@
 {
   "name": "Triage Helper",
-  "version": "1.0.5",
+  "version": "1",
   "manifest_version": 2,
   "description": "Making sure triagers take the right descision on an event",
- 
-  "icons": {
-    "128": "icon_128.png"
-  },
+  "ID" : "oegeapagenbobhbchbajdjolfnbmkaij",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAl7f0GEpBBHyknq2+yalp7biGOp/xNS/MGSEbPrka6AgpXfjApw8wrLnVvrRsCD+DxFXGSA/1AqMwj3UZ5480Rv9QPgDJ7r0PZFYtPB26FI31z0HlETmx3OIh7QQTkgQd+btPDMqQXoqH7MJktZOaxvjGDWB4cq242wKcdXl/OJMsN9QC4sHDEVJXKyWBlPGbdBCEnPJy8SD7AHdIquTcQwZErcJhuxK9axBSd278AKapIJvIRTcqIyIjdBWWY4LSs+WhAZulFHu7GujCDY0G7IHRU9ICnFRVEYyZFPXgqvMTsNtDahGB/06VgYHtYXIlbawrYSLqvpfeBBcfEH2VQwIDAQAB",
+          
+  "icons": { 
+    "16": "icon_128111.png",
+    "48": "icon_128111.png",
+   "128": "icon_128111.png" },
+
   "browser_action": {
     "default_title": "Triage Helper",
     "default_popup": "main.html"
@@ -33,6 +37,7 @@
     "https://ssl.gstatic.com/",
     "https://www.googleapis.com/",
     "https://accounts.google.com/",
-    "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?*"
+    "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/*",
+    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*"
     ]
 }
