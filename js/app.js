@@ -5,44 +5,6 @@ gDriveApp.factory('gdocs', function () {
   return gdocs;
 });
 
-// I have added this code  ----start
-chrome.tabs.getAllInWindow(undefined, function (tabs) {
-  console.log(tabs);
-  for (var i = 0; i < tabs.length; i++) {
-    //  https://chauffeur-dashboard.corp.google.com/triage/driving_events
-    var matchURL = []
-    matchURL = tabs[i].url.split("/details/")[0];
-       console.log(matchURL);
-    if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events"){
-    // if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/3643458747749042781"){
-    // if (tabs[i].url == "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html") {
-      
-      chrome.tabs.update(tabs[i].id, {
-        url: tabs[i].url,
-        selected: true
-      });
-      console.log("hello modifydom1");
-
-      function modifyDOM1() {
-        var keywords = [];
-        console.log("hello modifydom1");
-        var checkboxEle = document.getElementById("mat-checkbox-4-input");
-        console.log(checkboxEle);
-        checkboxEle.setAttribute("disabled", true);
-        return keywords;
-      }
-
-      chrome.tabs.executeScript({
-        code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
-      }, (results) => {
-        //Here we have just the innerHTML and not DOM structure
-        });
-      return;
-    }
-  }
-
-
-  //  i have added this code -----end
 function DocsController($scope, $http, gdocs) {
 
   $scope.drc = {
@@ -79,41 +41,47 @@ function DocsController($scope, $http, gdocs) {
       }).then(function (resp) {
         console.log("Success", resp);
 
-        chrome.tabs.getAllInWindow(undefined, function (tabs) {
-          console.log(tabs);
-          for (var i = 0; i < tabs.length; i++) {
-            //  https://chauffeur-dashboard.corp.google.com/triage/driving_events
-            var matchURL = []
-            matchURL = tabs[i].url.split("/details/")[0];
-               console.log(matchURL);
-            if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events"){
-                            // if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/3643458747749042781"){
-            // if (tabs[i].url == "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html") {
-              
-              chrome.tabs.update(tabs[i].id, {
-                url: tabs[i].url,
-                selected: true
-              });
-              console.log("hello modifydom1");
-
-              function modifyDOM1() {
-                var keywords = [];
-                console.log("hello modifydom1");
-                var checkboxEle = document.getElementById("mat-checkbox-4-input");
-                console.log(checkboxEle);
-                checkboxEle.setAttribute("disabled", true);
-                return keywords;
-              }
-
-              chrome.tabs.executeScript({
-                code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
-              }, (results) => {
-                //Here we have just the innerHTML and not DOM structure
-                });
-              return;
-            }
-          }
+        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+            console.log(response.farewell);
+          });
         });
+
+        // chrome.tabs.getAllInWindow(undefined, function (tabs) {
+        //   console.log(tabs);
+        //   for (var i = 0; i < tabs.length; i++) {
+        //     //  https://chauffeur-dashboard.corp.google.com/triage/driving_events
+        //     var matchURL = []
+        //     matchURL = tabs[i].url.split("/details/")[0];
+        //        console.log(matchURL);
+        //     if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events"){
+        //                     // if(matchURL == "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/3643458747749042781"){
+        //     // if (tabs[i].url == "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html") {
+              
+        //       chrome.tabs.update(tabs[i].id, {
+        //         url: tabs[i].url,
+        //         selected: true
+        //       });
+        //       console.log("hello modifydom1");
+
+        //       function modifyDOM1() {
+        //         var keywords = [];
+        //         console.log("hello modifydom1");
+        //         var checkboxEle = document.getElementById("mat-checkbox-4-input");
+        //         console.log(checkboxEle);
+        //         checkboxEle.setAttribute("disabled", true);
+        //         return keywords;
+        //       }
+
+        //       chrome.tabs.executeScript({
+        //         code: '(' + modifyDOM1 + ')();' //argument here is a string but function.toString() returns function's code
+        //       }, (results) => {
+        //         //Here we have just the innerHTML and not DOM structure
+        //         });
+        //       return;
+        //     }
+        //   }
+        // });
           window.close();
 
       }, function (err) {});
@@ -131,6 +99,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
   });
 });
 
+
+
 function modifyDOM() {
   var keywords = [];
   //  console.log(document.body);
@@ -147,6 +117,22 @@ chrome.tabs.executeScript({
   console.log('Popup script:')
   //   console.log("output: ", results);
 });
+
+
+chrome.tabs.getAllInWindow(undefined, function (tabs) {
+  console.log(tabs);
+
+  chrome.tabs.executeScript({
+    code: '(' + modifyDOM + ')();' //argument here is a string but function.toString() returns function's code
+  }, (results) => {
+    //Here we have just the innerHTML and not DOM structure
+    console.log('Popup script:')
+    //   console.log("output: ", results);
+  });
+  
+
+});
+
 
 
 // // listen to webportal
