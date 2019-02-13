@@ -14,7 +14,9 @@
   "content_scripts": [
     {
       "matches": [
-        "file:///C:/Users/gkoyalk/chrome%20extensions/*/*"
+        "file:///C:/Users/gkoyalk/chrome%20extensions/*/*",
+        "file:///C:/Users/sudarshan/Desktop/ext-chrome/checkbox/*",
+        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*"
       ],
       "js": ["js/background.js"],
       "run_at": "document_end"
@@ -27,30 +29,10 @@
 
   "permissions": [
     "activeTab",
-    "webNavigation",
     "tabs",
-    "http://*/*",
     "https://*/*",
-    "<all_urls>",
-    "*://*/*",
-    "identity",
-    "*://*.google.com/*",
-    "storage",
-    "https://www.gmail.com/",
-    "http://www.google.com/",
-    "https://www.google.com/",
-    "https://ssl.gstatic.com/",
-    "https://www.googleapis.com/",
-    "https://accounts.google.com/",
-    "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/*",
-    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/3643458747749042781/*",
+    "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?*",
     "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*",
     "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html"
     ]
 }
-
-
-
-// "background": {
-//   "scripts": ["js/background.js"]
-// },
