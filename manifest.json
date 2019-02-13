@@ -38,6 +38,8 @@
     "https://www.googleapis.com/",
     "https://accounts.google.com/",
     "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/*",
-    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*"
+    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/3643458747749042781/*",
+    "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*",
+    "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html"
     ]
 }
