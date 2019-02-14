@@ -16,6 +16,8 @@ function DocsController($scope, $http, gdocs) {
       noMajor: false,
       noStandard: false
     },
+    MajorInput: "",
+    StandardInput: "",
     noMajorInput: "",
     noStandardInput: "",
     checkboxRequired: true
@@ -32,7 +34,15 @@ function DocsController($scope, $http, gdocs) {
 
   $scope.submitForm = function (drcForm) {
     if (drcForm.$valid) {
-      var queryString = "LDAP=" + $scope.drc.LDAP + "&DRC=" + $scope.drc.DRC + "&major=" + $scope.drc.selectedOptions.major + "&standard=" + $scope.drc.selectedOptions.standard + "&noMajor=" + $scope.drc.selectedOptions.noMajor + "&noStandard=" + $scope.drc.selectedOptions.noStandard + "&noMajorInput=" + $scope.drc.noMajorInput + "&noStandardInput=" + $scope.drc.noStandardInput;
+      var queryString = "LDAP=" + $scope.drc.LDAP + "&DRC=" + $scope.drc.DRC + 
+      "&major=" + $scope.drc.selectedOptions.major + 
+      "&standard=" + $scope.drc.selectedOptions.standard + 
+      "&noMajor=" + $scope.drc.selectedOptions.noMajor + 
+      "&noStandard=" + $scope.drc.selectedOptions.noStandard + 
+      "&MajorInput=" + $scope.drc.MajorInput + 
+      "&StandardInput=" + $scope.drc.StandardInput + 
+      "&noMajorInput=" + $scope.drc.noMajorInput + 
+      "&noStandardInput=" + $scope.drc.noStandardInput;
       console.log($scope.drc);
       $http({
         method: 'GET',
