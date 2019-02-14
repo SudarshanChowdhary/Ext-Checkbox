@@ -14,9 +14,13 @@
   "content_scripts": [
     {
       "matches": [
-        "file:///C:/Users/gkoyalk/chrome%20extensions/*/*",
-        "file:///C:/Users/sudarshan/Desktop/ext-chrome/checkbox/*",
-        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*"
+          "file:///C:/Users/sudarshan/Desktop/ext-chrome/checkbox/*",
+          "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html",
+        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*",
+        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*",
+        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/-5365406270796642317?filters=%7B%22startDate%22:%22__EQ__2019-02-05__%22%7D",
+        "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/6216314495923363476?filters=%7B%22startDate%22:%22__EQ__2018-12-01__%22,%22assignee_qc%22:%22__RE__%255E%2524__%22,%22assignee%22:%22__RE__cgarikipati__%22%7D&replication=2,ASSIGNEE_ELIGIBLE"
+        
       ],
       "js": ["js/jquery-3.3.1.min.js", "js/background.js"],
       "run_at": "document_end"
@@ -29,6 +33,7 @@
 
   "permissions": [
     "activeTab",
+    "*",
     "tabs",
     "https://*/*",
     "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?*",
