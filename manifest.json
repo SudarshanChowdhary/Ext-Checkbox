@@ -15,6 +15,7 @@
     {
       "matches": [
           "file:///C:/Users/sudarshan/Desktop/ext-chrome/checkbox/*",
+          "file:///C:/Users/gkoyalk/chrome%20extensions/Ext-checkbox/example.html",
           "file:///usr/local/google/home/skoyalkar/Desktop/chrome-ext/ext-Checkbox/Ext-Checkbox/example.html",
         "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*",
         "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*",

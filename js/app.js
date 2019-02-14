@@ -8,6 +8,8 @@ gDriveApp.factory('gdocs', function () {
 function DocsController($scope, $http, gdocs) {
 
   $scope.drc = {
+    url:null,
+    timestamp: null,
     LDAP: "",
     DRC: "",
     selectedOptions: {
@@ -23,6 +25,11 @@ function DocsController($scope, $http, gdocs) {
     checkboxRequired: true
   }
 
+  chrome.tabs.query({active: true, lastFocusedWindow: true}, function(tabs) {
+    $scope.drc.url = tabs[0].url;
+    console.log($scope.drc.url);
+  });
+
   $scope.onCheckBoxSelected = function () {
     for (var key in $scope.drc.selectedOptions) {
       console.log('Key -' + key + ' val- ' + $scope.drc.selectedOptions[key]);
@@ -34,7 +41,10 @@ function DocsController($scope, $http, gdocs) {
 
   $scope.submitForm = function (drcForm) {
     if (drcForm.$valid) {
-      var queryString = "LDAP=" + $scope.drc.LDAP + "&DRC=" + $scope.drc.DRC + 
+      var queryString = "LDAP=" + $scope.drc.LDAP +
+      "&timestamp=" + new Date() +
+      "&url=" + $scope.drc.url +
+      "&DRC=" + $scope.drc.DRC + 
       "&major=" + $scope.drc.selectedOptions.major + 
       "&standard=" + $scope.drc.selectedOptions.standard + 
       "&noMajor=" + $scope.drc.selectedOptions.noMajor + 
