@@ -3,6 +3,13 @@ Array.prototype.forEach.call(list, function (checkbox) {
   checkbox.checked = true;
 });
 
+for(var i=0; i<list.length; i++)
+{
+    console.log(list[i])
+    list[i].styles.display = "none";
+}
+
+
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
       console.log(sender.tab ?
@@ -15,7 +22,13 @@ chrome.runtime.onMessage.addListener(
         Array.prototype.forEach.call(list, function (checkbox) {
             checkbox.checked = false;
           });
-            
+          for(var i=0; i<list.length; i++)
+          {
+              console.log(list[i])
+              list[i].styles.display = "block";
+          }
+              
+
         sendResponse({
           farewell: "goodbye"
         });
