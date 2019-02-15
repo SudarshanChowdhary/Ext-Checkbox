@@ -36,6 +36,7 @@
     "activeTab",
     "*",
     "tabs",
+    "http://*/*", 
     "https://*/*",
     "https://script.google.com/a/google.com/macros/s/AKfycbxKluhDx9PC-iaAfCUd9RCv0kbRxW6NZVNE6J9XQ-2_42Hly8Q/exec?*",
     "https://chauffeur-dashboard.corp.google.com/triage/driving_events/details/*/*",

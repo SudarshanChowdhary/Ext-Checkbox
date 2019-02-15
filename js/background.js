@@ -3,6 +3,10 @@
 //   $("#mat-checkbox-4-input").prop('disabled', true);
 // })
 
+chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+  console.log(response.farewell);
+});
+
 function modifyDOM1() {
   var keywords = [];
   console.log("hello modifydom1");
