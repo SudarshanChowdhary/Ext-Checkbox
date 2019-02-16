@@ -21,7 +21,7 @@ function DocsController($scope, $http, gdocs) {
 
   $scope.drc = {
     url:null,
-    timestamp: null,
+    timestamp: new Date().toLocaleString(),
     LDAP: "",
     DRC: "",
     selectedOptions: {
@@ -54,7 +54,7 @@ function DocsController($scope, $http, gdocs) {
   $scope.submitForm = function (drcForm) {
     if (drcForm.$valid) {
       var queryString = "LDAP=" + $scope.drc.LDAP +
-      "&timestamp=" + new Date() +
+      "&timestamp=" + $scope.drc.timestamp +
       "&url=" + $scope.drc.url +
       "&DRC=" + $scope.drc.DRC + 
       "&major=" + $scope.drc.selectedOptions.major + 

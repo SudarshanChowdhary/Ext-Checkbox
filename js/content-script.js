@@ -6,7 +6,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 for(var i=0; i<list.length; i++)
 {
     console.log(list[i])
-    list[i].styles.display = "none";
+    list[i].style.display = "none";
 }
 
 
