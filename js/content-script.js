@@ -1,14 +1,10 @@
-var list = document.querySelectorAll("input[id='mat-checkbox-4-input']");
-Array.prototype.forEach.call(list, function (checkbox) {
-  checkbox.checked = true;
-});
 
-for(var i=0; i<list.length; i++)
-{
-    console.log(list[i])
-    list[i].style.display = "none";
-}
-
+setTimeout(function(){
+  $(document).ready(function(){
+    console.log("hello");
+    $("#mat-checkbox-4-input").prop("disabled", true);
+  })
+},2000)
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
@@ -17,18 +13,8 @@ chrome.runtime.onMessage.addListener(
         "from the extension");
   
       if (request.greeting == "hello") {
-        //      $("#mat-checkbox-4-input").prop('disabled', false);
-        var list = document.querySelectorAll("input[id='mat-checkbox-4-input']");
-        Array.prototype.forEach.call(list, function (checkbox) {
-            checkbox.checked = false;
-          });
-          for(var i=0; i<list.length; i++)
-          {
-              console.log(list[i])
-              list[i].styles.display = "block";
-          }
-              
-
+             $("#mat-checkbox-4-input").prop('disabled', false);
+       
         sendResponse({
           farewell: "goodbye"
         });
