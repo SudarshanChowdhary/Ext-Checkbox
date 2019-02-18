@@ -26,14 +26,14 @@ function DocsController($scope, $http, gdocs) {
     DRC: "",
     selectedOptions: {
       major: false,
-      standard: false,
+      stranded: false,
       noMajor: false,
-      noStandard: false
+      noStranded: false
     },
     MajorInput: "",
-    StandardInput: "",
+    StrandedInput: "",
     noMajorInput: "",
-    noStandardInput: "",
+    noStrandedInput: "",
     checkboxRequired: true
   }
 
@@ -58,13 +58,13 @@ function DocsController($scope, $http, gdocs) {
       "&url=" + $scope.drc.url +
       "&DRC=" + $scope.drc.DRC + 
       "&major=" + $scope.drc.selectedOptions.major + 
-      "&standard=" + $scope.drc.selectedOptions.standard + 
+      "&stranded=" + $scope.drc.selectedOptions.stranded + 
       "&noMajor=" + $scope.drc.selectedOptions.noMajor + 
-      "&noStandard=" + $scope.drc.selectedOptions.noStandard + 
+      "&noStranded=" + $scope.drc.selectedOptions.noStranded + 
       "&MajorInput=" + $scope.drc.MajorInput + 
-      "&StandardInput=" + $scope.drc.StandardInput + 
+      "&StrandedInput=" + $scope.drc.StrandedInput + 
       "&noMajorInput=" + $scope.drc.noMajorInput + 
-      "&noStandardInput=" + $scope.drc.noStandardInput;
+      "&noStrandedInput=" + $scope.drc.noStrandedInput;
       console.log($scope.drc);
       $http({
         method: 'GET',

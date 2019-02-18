@@ -35,7 +35,7 @@
      <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox" ng-required="drc.checkboxRequired" ng-change="onCheckBoxSelected()" name="standard" ng-model="drc.selectedOptions.standard" ng-true-value="true" ng-false-value="false" > Standard</label>
+          <label><input type="checkbox" ng-required="drc.checkboxRequired" ng-change="onCheckBoxSelected()" name="stranded" ng-model="drc.selectedOptions.stranded" ng-true-value="true" ng-false-value="false" > Stranded</label>
         </div>
       </div>
     </div>
@@ -49,7 +49,7 @@
      <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <div class="checkbox">
-          <label><input type="checkbox" ng-required="drc.checkboxRequired" ng-change="onCheckBoxSelected()" name="noStandard" ng-true-value="true" ng-false-value="false"  ng-model="drc.selectedOptions.noStandard"/>  No Standard</label>
+          <label><input type="checkbox" ng-required="drc.checkboxRequired" ng-change="onCheckBoxSelected()" name="noStranded" ng-true-value="true" ng-false-value="false"  ng-model="drc.selectedOptions.noStranded"/>  No Stranded</label>
         </div>
       </div>
     </div>
@@ -60,10 +60,10 @@
         <input type="text" class="form-control" ng-required="drc.selectedOptions.major" id="MajorInput" ng-model="drc.MajorInput" placeholder="Major?" name="MajorInput">
       </div>
     </div>
-     <div class="form-group" ng-show="drc.selectedOptions.standard">
-      <label class="control-label col-sm-2" for="noStandard">Why Standard?<span style="color:red;">*</span></label>
+     <div class="form-group" ng-show="drc.selectedOptions.stranded">
+      <label class="control-label col-sm-2" for="noStranded">Why Stranded?<span style="color:red;">*</span></label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" ng-required="drc.selectedOptions.standard" id="StandardInput" ng-model="drc.StandardInput" placeholder="Standard?" name="StandardInput">
+        <input type="text" class="form-control" ng-required="drc.selectedOptions.stranded" id="StrandedInput" ng-model="drc.StrandedInput" placeholder="Stranded?" name="StrandedInput">
       </div>
     </div>
 
@@ -73,10 +73,10 @@
         <input type="text" class="form-control" ng-required="drc.selectedOptions.noMajor" id="noMajorInput" ng-model="drc.noMajorInput" placeholder="No Major?" name="noMajorInput">
       </div>
     </div>
-     <div class="form-group" ng-show="drc.selectedOptions.noStandard">
-      <label class="control-label col-sm-2" for="noStandard">Why no Standard?<span style="color:red;">*</span></label>
+     <div class="form-group" ng-show="drc.selectedOptions.noStranded">
+      <label class="control-label col-sm-2" for="noStranded">Why no Stranded?<span style="color:red;">*</span></label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" ng-required="drc.selectedOptions.noStandard" id="noStandardInput" ng-model="drc.noStandardInput" placeholder="No Standard?" name="noStandardInput">
+        <input type="text" class="form-control" ng-required="drc.selectedOptions.noStranded" id="noStrandedInput" ng-model="drc.noStrandedInput" placeholder="No Stranded?" name="noStrandedInput">
       </div>
     </div>
     <div class="form-group">        

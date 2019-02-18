@@ -4,7 +4,7 @@ setTimeout(function(){
     console.log("hello");
     $("#mat-checkbox-4-input").prop("disabled", true);
   })
-},2000)
+},3000)
 
 chrome.runtime.onMessage.addListener(
     function (request, sender, sendResponse) {
